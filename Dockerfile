@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy only necessary files first (for better caching)
 COPY pyproject.toml MANIFEST.in README.md LICENSE NOTICE ./
 COPY neurogym ./neurogym
+COPY assets /usr/share/nginx/html/assets
 
 # Install Python dependencies
 # Use CPU-only PyTorch to save space on Raspberry Pi
